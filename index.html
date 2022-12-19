@@ -2,43 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
   
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Tip calculator app</title>
 </head>
 <body>
+  <div class="container">
 
-  Bill
+    <div class="logo">
+      <img src="./images/logo.svg" alt="Logo" class="logo__img">
+    </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <main class="main">
 
-  Number of People
+      <div class="input">
 
-  Tip Amount
-  / person
+        <div class="input__bill">
+          <div class="label__wrapper">
+            <label for="inp__bill">Bill</label>
+          </div>
 
-  Total
-  / person
+          <div class="inp__wrapper">
+            <input class="inp__text" id="inp__bill" type="text" name="inp__bill" placeholder="0.0">
+            <img src="./images/icon-dollar.svg" alt="Icon dollar">
+          </div>
+        </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <div class="input__tip">
+          <div class="label__wrapper">
+            <label for="inp__tip">Select Tip %</label>
+          </div>
+          <div class="btn__wrapper">
+            <div class="btn tip">5%</div>
+            <div class="btn tip">10%</div>
+            <div class="btn tip btn-active">15%</div>
+            <div class="btn tip">25%</div>
+            <div class="btn tip">50%</div>
+            <input type="text" class="inp__text" id="inp__tip" name="inp__tip" placeholder="Custom">
+          </div>
+        </div>
+
+        <div class="input__people">
+          <div class="label__wrapper">
+            <label for="inp__people">Number of People</label>
+            <div class="error-msg">Can't be zero</div>
+          </div>
+
+          <div class="inp__wrapper">
+            <input class="inp__text inp__text-2" id="inp__people" type="text" name="inp__people" placeholder="1">
+            <img src="./images/icon-person.svg" alt="Icon person">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="output">
+        <div class="line__wrapper">
+          <div class="line__output">
+            <div class="title__wrapper">
+              <div class="title">Tip Amount</div>
+              <div class="desc">/ person</div>
+            </div>
+            <div class="value">$0</div>
+          </div>
+
+          <div class="line__output">
+            <div class="title__wrapper">
+              <div class="title">Total</div>
+              <div class="desc">/ person</div>
+            </div>
+            <div class="value">$0</div>
+          </div>
+        </div>
+        <div class="btn reset">Reset</div>
+      </div>
+
+    </main>
+
   </div>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://gaston-recalde-portafolio.netlify.app" target="_blank">Gastón Recalde</a>.
+  </footer>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>

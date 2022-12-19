@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185deg, 41%, 84%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .logo {
+  margin: 5rem 0 3.5rem 0;
+}
+.container .main {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 100%;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2.5rem;
+}
+.container .main .input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.container .main .input .label__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+}
+.container .main .input .label__wrapper label {
+  color: hsl(186deg, 14%, 43%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.container .main .input .label__wrapper .error-msg {
+  color: indianred;
+  font-weight: 700;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+.container .main .input .label__wrapper .show-error-msg {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.container .main .input .inp__text {
+  background-color: hsl(185deg, 41%, 84%);
+  border: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: hsl(183deg, 100%, 15%);
+  font-family: "Space Mono", monospace;
+  font-size: 2.4rem;
+  text-align: right;
+  padding: 0.5rem 2.4rem;
+}
+.container .main .input .inp__text:hover {
+  cursor: pointer;
+}
+.container .main .input .inp__text:focus {
+  outline: none;
+  border: 2px solid hsl(172deg, 67%, 45%);
+}
+.container .main .input .inp__text-error {
+  border: 2px solid indianred;
+}
+.container .main .input .inp__wrapper {
+  position: relative;
+}
+.container .main .input .inp__wrapper img {
+  position: absolute;
+  left: 2.4rem;
+  top: 1.5rem;
+}
+.container .main .input .btn__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 1.2rem;
+}
+.container .main .input .btn__wrapper .btn {
+  width: 45%;
+  text-align: center;
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2.4rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0;
+  transition: all 0.5s ease;
+}
+.container .main .input .btn__wrapper .btn:hover {
+  background-color: rgb(159, 232, 223);
+  color: hsl(183deg, 100%, 15%);
+  cursor: pointer;
+}
+.container .main .input .btn__wrapper .btn-active {
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+}
+.container .main .input .btn__wrapper .inp__text {
+  width: 46%;
+}
+.container .main .output {
+  width: 100%;
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 1.5rem;
+  padding: 2.2rem;
+}
+.container .main .output .line__wrapper .line__output {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.4rem 0 2.4rem 0;
+}
+.container .main .output .line__wrapper .line__output .title {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.container .main .output .line__wrapper .line__output .desc {
+  color: hsl(186deg, 14%, 43%);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.container .main .output .line__wrapper .line__output .value {
+  color: hsl(172deg, 67%, 45%);
+  font-weight: 700;
+  font-size: 3rem;
+}
+.container .main .output .btn {
+  width: 100%;
+  background-color: hsl(172deg, 67%, 45%);
+  text-transform: uppercase;
+  text-align: center;
+  color: hsl(183deg, 100%, 15%);
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  margin-top: 3.4rem;
+  transition: all 0.5s ease;
+}
+.container .main .output .btn:hover {
+  background-color: rgb(159, 232, 223);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .container .main {
+    width: 90%;
+    max-width: 920px;
+    flex-direction: row;
+    border-radius: 2.5rem;
+    align-items: stretch;
+    padding: 3.4rem;
+    gap: 1.5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 30px rgba(0, 0, 0, 0.05);
+  }
+  .container .main .input {
+    width: 105%;
+    padding: 0 3.5rem 1.5rem 1.5rem;
+  }
+  .container .main .input .label-wrapper {
+    padding: 1rem 0;
+  }
+  .container .main .input .btn-wrapper .btn {
+    width: 30.5%;
+  }
+  .container .main .input .btn-wrapper .inp-text {
+    width: 30.5%;
+  }
+  .container .main .output {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+  .container .main .output .line-wrapper .line-output {
+    margin: 0.5rem 0 2.4rem 0;
+  }
+  .container .main .output .line-wrapper .line-output .value {
+    font-size: 4.6rem;
+  }
+}/*# sourceMappingURL=style.css.map */

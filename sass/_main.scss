@@ -1,0 +1,235 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .logo{
+        margin: 5rem 0 3.5rem 0;
+    }
+
+    .main{
+        background-color: $white;
+        width: 100%;
+        border-top-left-radius: 2.5rem;
+        border-top-right-radius: 2.5rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        padding: 2.5rem;
+        
+        .input{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            .label__wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.6rem 0;
+
+                label{
+                    color: $dark-grayish-cyan;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+
+                .error-msg{
+                    color: indianred;
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    opacity: 0;
+                }
+
+                .show-error-msg{
+                    transition:  opacity .5s ease-in-out;
+                    opacity: 1;
+                }
+            }
+
+            .inp__text{
+                background-color: $light-grayish-cyan;
+                border: none;
+                width: 100%;
+                border-radius: 0.5rem;
+                color: $very-dark-cyan;
+                font-family: 'Space Mono', monospace;
+                font-size: 2.4rem;
+                text-align: right;
+                padding: 0.5rem 2.4rem;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                &:focus{
+                    outline: none;
+                    border: 2px solid $strong-cyan;
+                }
+            }
+
+            .inp__text-error{
+                border: 2px solid indianred;
+            }
+
+            .inp__wrapper{
+                position: relative;
+
+                img{
+                    position: absolute;
+                    left: 2.4rem;
+                    top: 1.5rem;
+                }
+            }
+
+            .btn__wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                padding-top: 1.2rem;
+
+                .btn{
+                    width: 45%;
+                    text-align: center;
+                    background-color: $very-dark-cyan;
+                    color: $white;
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    border-radius: 0.5rem;
+                    padding: 0.6rem 0;
+
+                    transition: all .5s ease;
+
+                    &:hover{
+                        background-color: rgb(159, 232, 223);
+                        color: $very-dark-cyan;
+                        cursor: pointer;
+                    }
+                }
+
+                .btn-active{
+                    background-color: $strong-cyan;
+                    color: $very-dark-cyan;
+                }
+
+                .inp__text{
+                    width: 46%;
+                }
+            }
+        }
+
+        .output{
+            width: 100%;
+            background-color: $very-dark-cyan;
+            border-radius: 1.5rem;
+            padding: 2.2rem;
+
+            .line__wrapper{
+                .line__output{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 1.4rem 0 2.4rem 0;
+
+                    .title{
+                        color: $white;
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                    }
+
+                    .desc{
+                        color: $dark-grayish-cyan;
+                        font-weight: 700;
+                        font-size: 1.3rem;
+                    }
+
+                    .value{
+                        color: $strong-cyan;
+                        font-weight: 700;
+                        font-size: 3rem;
+                    }
+                }
+            }
+
+            .btn{
+                width: 100%;
+                background-color: $strong-cyan;
+                text-transform: uppercase;
+                text-align: center;
+                color: $very-dark-cyan;
+                font-size: 2rem;
+                font-weight: 700;
+                border-radius: 0.5rem;
+                padding: 1rem 0;
+                margin-top: 3.4rem;
+                transition: all .5s ease;
+
+                &:hover{
+                    background-color: rgb(159, 232, 223);
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        .main{
+            width: 90%;
+            max-width: 920px;
+            flex-direction: row;
+            border-radius: 2.5rem;
+            align-items: stretch;
+            padding: 3.4rem;
+            gap: 1.5rem;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 30px rgba(0, 0, 0, 0.05);
+    
+            .input{
+                width: 105%;
+                padding: 0 3.5rem 1.5rem 1.5rem;
+    
+                .label-wrapper{
+                    padding: 1rem 0;
+                }
+    
+                .btn-wrapper{
+                    .btn{
+                        width: 30.5%;
+                    }
+    
+                    .inp-text{
+                        width: 30.5%;
+                    }
+                }
+            }
+    
+            .output{
+                width: 95%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 4rem;
+    
+                .line-wrapper{
+                    .line-output{
+                        margin: 0.5rem 0 2.4rem 0;
+                        .value{
+                            font-size: 4.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
